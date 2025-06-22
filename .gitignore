@@ -17,3 +17,4 @@ venv/
 # Static/media
 staticfiles/
 media/
+".env" 
