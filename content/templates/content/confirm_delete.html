@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontentni o‘chirish</title>
+</head>
+<body style="background:#121212;color:white;text-align:center;padding:50px">
+    <h2>❗Diqqat!</h2>
+    <p>"<strong>{{ content.title }}</strong>" nomli kontentni o‘chirilsinmi?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" style="padding:10px 20px;background:red;color:white;border:none;">Ha, o‘chir</button>
+        <a href="{% url 'home' %}" style="margin-left:20px;color:#4fc3f7;">Yo‘q, ortga</a>
+    </form>
+</body>
+
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ content.title }} ni o‘chirmoqchimisiz?</h2>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Ha, o‘chirish</button>
+    <a href="{% url 'home' %}">Bekor qilish</a>
+  </form>
+{% endblock %}
+
+</html>
