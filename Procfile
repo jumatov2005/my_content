@@ -1,1 +1,1 @@
-web: gunicorn my_day.wsgi:application
+web: gunicorn my_content.wsgi
