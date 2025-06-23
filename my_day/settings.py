@@ -29,7 +29,7 @@ SECRET_KEY = env("SECRET_KEY")  # Bu endi ishlaydi
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost'])
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", ".onrender.com").split(" ")
 # Application definition
 
 INSTALLED_APPS = [
