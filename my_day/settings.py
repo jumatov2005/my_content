@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # MUHIM QADAM: .env fayl yo‘lini to‘g‘ri ko‘rsatamiz
 env = environ.Env()
 env_path = os.path.join(BASE_DIR, '.env')
-environ.Env.read_env(env_path)  # .env dan o‘qish
+environ.Env.read_env()  # .env dan o‘qish
 
 SECRET_KEY = env("SECRET_KEY")  # Bu endi ishlaydi
 
