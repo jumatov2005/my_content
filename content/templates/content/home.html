@@ -41,28 +41,28 @@
             margin-bottom: 15px;
         }
 
-        .media-left {
-            float: left;
-            margin-right: 20px;
-            width: 200px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #2a2a2a;
-            border-radius: 10px;
-            overflow: hidden;
+        ..media-left {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 20px auto;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
         }
 
         .light-theme .media-left {
             background-color: #e0e0e0;
         }
 
-        .media-left img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+    media-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    }
 
         .article-body {
             text-align: justify;
